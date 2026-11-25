@@ -165,12 +165,6 @@ LinkShield addresses these by explaining each verdict, calibrating probabilities
 
 ---
 
-### 🚨 Scanner: Phishing Result
-
-![Phishing result](docs/screenshots/scan-phishing.png)
-
----
-
 ### 📜 Scan History
 
 ![History](Screenshots/Screenshot-2.png)
