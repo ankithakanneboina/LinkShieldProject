@@ -195,9 +195,8 @@ LinkShield addresses these by explaining each verdict, calibrating probabilities
 ## Project Demonstration
 
 **▶️ Demo Video:**  
-[Click here to watch the project demo](YOUR_DEMO_VIDEO_LINK)
+[Click here to watch the project demo](https://youtu.be/BjjzzPt0r5g)
 
-> Replace `YOUR_DEMO_VIDEO_LINK` with your YouTube or Google Drive link.
 
 ### Demo Covers
 
