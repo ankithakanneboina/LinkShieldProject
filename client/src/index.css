@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-navy-950 font-sans text-ink antialiased;
+    background-image:
+      radial-gradient(60rem 28rem at 78% -8%, rgba(57, 135, 229, 0.14), transparent 60%),
+      radial-gradient(40rem 24rem at -5% 4%, rgba(34, 211, 238, 0.07), transparent 60%);
+    background-attachment: fixed;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.cyan.400');
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: rgba(34, 211, 238, 0.3);
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-line bg-navy-850/80 shadow-panel;
+  }
+  .card-pad {
+    @apply p-5 sm:p-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-55;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-b from-brand-400 to-brand-500 text-navy-950 hover:from-brand-300 hover:to-brand-400;
+  }
+  .btn-secondary {
+    @apply border border-line-strong bg-navy-800 text-ink hover:bg-navy-700;
+  }
+  .btn-danger {
+    @apply bg-risk-high text-white hover:bg-[#b83232];
+  }
+  .btn-ghost {
+    @apply text-ink-soft hover:bg-navy-800 hover:text-ink;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-line-strong bg-navy-900 px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-mute focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/30 aria-[invalid=true]:border-risk-high;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-ink;
+  }
+
+  .th {
+    @apply whitespace-nowrap px-4 py-3 text-left text-xs font-medium text-ink-mute;
+  }
+  .td {
+    @apply px-4 py-3 align-middle text-sm text-ink-soft;
+  }
+
+  .prose-ls {
+    @apply max-w-[68ch] text-[0.95rem] leading-7 text-ink-soft;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
